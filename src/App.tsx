@@ -75,7 +75,7 @@ function App() {
                         <TextEffect
                             per="word"
                             delay={1.5}
-                            className="font-kontora text-lg sm:text-xl md:text-2xl  text-blue-400 mb-12 leading-relaxed"
+                            className="font-kontora text-lg sm:text-xl md:text-2xl text-[#333333]/70 mb-12 leading-relaxed"
                             preset="slide"
                         >
                             Where ordinary cards become bespoke statements.
