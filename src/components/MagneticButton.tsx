@@ -7,7 +7,7 @@ export function MagneticButton() {
         <Magnetic intensity={0.3} springOptions={springOptions} actionArea="self" range={150}>
             <button
                 onClick={() => console.log('Button Clicked')}
-                className="group relative overflow-hidden px-10 py-4 rounded-full bg-blue-600 border text-white font-medium tracking-wide transition-all duration-300 shadow-md"
+                className="group relative overflow-hidden px-10 py-4 rounded-full bg-white border-2 border-blue-600 text-blue-600 font-medium text-lg tracking-wide transition-all duration-300 shadow-md"
             >
                 <Magnetic intensity={0.1} springOptions={springOptions} actionArea="self" range={100}>
                     <span className="relative z-10">Begin Journey</span>
