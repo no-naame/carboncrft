@@ -35,9 +35,9 @@
   border: 1px solid transparent;
   border-radius: inherit;
   background: linear-gradient(135deg, #C6A55C 0%, #E7CC87 50%, #C6A55C 100%) border-box;
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) padding-box, 
-    linear-gradient(#fff 0 0);
+  -webkit-mask:
+          linear-gradient(#fff 0 0) padding-box,
+          linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
 }
