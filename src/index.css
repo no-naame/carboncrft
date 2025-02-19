@@ -1,0 +1,61 @@
+@import url('https://fonts.cdnfonts.com/css/kontora');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #C6A55C 0%, #E7CC87 50%, #C6A55C 100%);
+}
+
+.gold-text {
+  background: linear-gradient(135deg, #C6A55C 0%, #E7CC87 50%, #C6A55C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-shadow {
+  box-shadow: 0 0 50px rgba(198, 165, 92, 0.15);
+}
+
+.premium-border {
+  position: relative;
+}
+
+.premium-border::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid transparent;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #C6A55C 0%, #E7CC87 50%, #C6A55C 100%) border-box;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) padding-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+
+.vertical-slider {
+  height: calc(100vh - 8rem);
+}
+
+.slide-transition {
+  transition: transform 0.5s ease-out;
+}
+
+.vertical-progress {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.headline-spacing {
+  letter-spacing: 0.2em;
+  line-height: 1.2;
+}
