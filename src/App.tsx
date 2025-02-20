@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { TextEffect } from './components/TextEffect';
 import { MagneticButton } from "./components/MagneticButton";
-
+import { Link } from 'react-router-dom'
 
 const Logo = () => (
   <svg width="230.75" height="30.345733984266875" viewBox="0 0 350 46.02819889271249" className="text-[#333333]">
@@ -93,7 +93,9 @@ function App() {
                 </TextEffect>
 
                 <div className="pt-8">
-                  <MagneticButton />
+                <Link to="/products">
+                    <MagneticButton />
+                </Link>
                 </div>
               </div>
             </div>

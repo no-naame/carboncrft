@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 interface Product {
@@ -13,25 +12,25 @@ const products: Product[] = [
     id: '1',
     name: 'CARBONCRAFT OBSIDIAN',
     price: 24999.00,
-    image: '/metal-card-black.jpg'
+    image: 'https://img.freepik.com/free-vector/black-credit-card_1017-6276.jpg?t=st=1740073283~exp=1740076883~hmac=2fe5633b147c5af831f22c31b5934900074a92f74fcf0bbd933478b0d62a2c50&w=1480'
   },
   {
     id: '2',
     name: 'CARBONCRAFT SILVER',
     price: 19999.00,
-    image: '/metal-card-silver.jpg'
+    image: 'https://img.freepik.com/free-vector/black-credit-card_1017-6276.jpg?t=st=1740073283~exp=1740076883~hmac=2fe5633b147c5af831f22c31b5934900074a92f74fcf0bbd933478b0d62a2c50&w=1480'
   },
   {
     id: '3',
     name: 'CARBONCRAFT GOLD',
     price: 29999.00,
-    image: '/metal-card-gold.jpg'
+    image: 'https://img.freepik.com/free-vector/black-credit-card_1017-6276.jpg?t=st=1740073283~exp=1740076883~hmac=2fe5633b147c5af831f22c31b5934900074a92f74fcf0bbd933478b0d62a2c50&w=1480'
   },
   {
     id: '4',
     name: 'CARBONCRAFT ROSE GOLD',
     price: 29999.00,
-    image: '/metal-card-rose.jpg'
+    image: 'https://img.freepik.com/free-vector/black-credit-card_1017-6276.jpg?t=st=1740073283~exp=1740076883~hmac=2fe5633b147c5af831f22c31b5934900074a92f74fcf0bbd933478b0d62a2c50&w=1480'
   }
 ];
 
@@ -40,16 +39,16 @@ export function ProductCatalog() {
     <div className="container mx-auto px-4 py-16">
       <h1 className="text-4xl font-bold text-[#333333] mb-4 text-center">Premium Metal Cards</h1>
       <p className="text-center text-[#333333]/70 mb-12 max-w-2xl mx-auto">Transform your everyday plastic cards into stunning metal masterpieces. Each card is precision crafted for durability and elegance.</p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {products.map((product) => (
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-2 lg:grid-cols-3 md:gap-8">
+        {products.map((product, index) => (
           <motion.div
             key={product.id}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="group cursor-pointer"
+            className={`group cursor-pointer ${index % 3 === 2 ? 'col-span-2 md:col-span-1' : ''}`}
           >
-            <div className="relative aspect-[3/4] overflow-hidden bg-gray-100 mb-4">
+            <div className={`relative overflow-hidden bg-gray-100 mb-4 ${index % 3 === 2 ? 'aspect-[2/1.5]' : 'aspect-[3/4]'}`}>
               <img
                 src={product.image}
                 alt={product.name}
