@@ -80,7 +80,7 @@ function App() {
                   className="font-kontora font-extralight text-6xl sm:text-7xl md:text-8xl xl:text-9xl text-[#333333] tracking-tight mb-8"
                   preset="fade-in-blur"
                 >
-                  Metal Cards
+                  Met-Cards
                 </TextEffect>
 
                 <TextEffect
