@@ -3,7 +3,12 @@ import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-export function MagneticButton() {
+interface MagneticButtonProps {
+  href: string;
+  children: React.ReactNode;
+}
+
+export function MagneticButton({ href, children }: MagneticButtonProps) {
   const navigate = useNavigate();
   const buttonRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -47,13 +52,14 @@ export function MagneticButton() {
       className="inline-block"
     >
       <button
-        onClick={() => navigate('/products')}
-        className="group relative overflow-hidden rounded-full bg-[#333333] px-8 py-4 transition-all duration-300 hover:pr-14">
-        <span className="relative z-10 text-white">
-          Get Started
+        onClick={() => navigate(href)}
+        className="group relative overflow-hidden rounded-full bg-[#333333] px-6 sm:px-8 py-3 sm:py-4 transition-all duration-300 hover:pr-12 sm:hover:pr-14"
+      >
+        <span className="relative z-10 text-white text-sm sm:text-base">
+          {children}
         </span>
-        <span className="absolute right-4 top-1/2 -translate-y-1/2 text-white opacity-0 transition-all duration-300 group-hover:opacity-100">
-          <ArrowUpRight size={20} />
+        <span className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 text-white opacity-0 transition-all duration-300 group-hover:opacity-100">
+          <ArrowUpRight size={18} className="sm:w-5 sm:h-5" />
         </span>
       </button>
     </motion.div>
