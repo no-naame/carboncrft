@@ -34,7 +34,7 @@ export function Home() {
                   as="h1"
                   per="char"
                   delay={0.5}
-                  className="font-kontora font-extralight text-6xl sm:text-7xl md:text-8xl xl:text-9xl text-[#333333] tracking-tight mb-4"
+                  className="font-kontora font-extralight text-5xl sm:text-7xl md:text-8xl xl:text-9xl text-[#333333] tracking-tight mb-4"
                   variants={{
                     container: {
                       hidden: { opacity: 0 },
@@ -56,7 +56,7 @@ export function Home() {
                   as="h1"
                   per="char"
                   delay={1}
-                  className="font-kontora font-extralight text-6xl sm:text-7xl md:text-8xl xl:text-9xl text-[#333333] tracking-tight mb-8"
+                  className="font-kontora font-extralight text-5xl sm:text-7xl md:text-8xl xl:text-9xl text-[#333333] tracking-tight mb-8"
                   preset="fade-in-blur"
                 >
                   Met-Cards
